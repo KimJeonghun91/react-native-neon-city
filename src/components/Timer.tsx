@@ -6,7 +6,7 @@ import {
   useAnimatedStyle,
 } from 'react-native-reanimated';
 import { useGameStage, useGameState, useTimer } from '@hooks';
-import { memo, useCallback } from 'react';
+import { memo } from 'react';
 import { AudioTracks, useAudio } from '@providers';
 
 type Props = {
@@ -27,10 +27,7 @@ export const Timer = memo(({ duration }: Props) => {
     fillGauge,
   } = useTimer({
     durationMS: duration,
-    onFinished: useCallback(() => {
-      // setScoreHistory(toDt(new Date()), score.value, userId!);
-      finish();
-    }, []),
+    onFinished: finish,
   });
 
   const progressFill = useAnimatedStyle(() => {
