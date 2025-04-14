@@ -1,6 +1,5 @@
 import { useMemo, useRef } from 'react';
 import { ViewStyle } from 'react-native';
-import { isNil } from 'react-native-worklet-functions';
 import Rive, {
   Direction,
   Fit,
@@ -77,50 +76,34 @@ export const useRiveNative: Func<Input, Output> = ({
     };
   }, [riveRef, fit, autoplay, rest]);
 
-  const isRefConnectedToComponent = () => {
-    return !isNil(riveRef.current);
-  };
-
   const play = (
     animationName?: string,
     loop?: LoopMode,
     direction?: Direction,
     isStateMachine?: boolean
   ) => {
-    if (isRefConnectedToComponent()) {
-      riveRef.current!.stop();
-      riveRef.current!.play(animationName, loop, direction, isStateMachine);
-    }
+    riveRef.current?.stop();
+    riveRef.current?.play(animationName, loop, direction, isStateMachine);
   };
 
   const stop = () => {
-    if (isRefConnectedToComponent()) {
-      riveRef.current!.stop();
-    }
+    riveRef.current?.stop();
   };
 
   const pause = () => {
-    if (isRefConnectedToComponent()) {
-      riveRef.current!.pause();
-    }
+    riveRef.current?.pause();
   };
 
   const resume = () => {
-    if (isRefConnectedToComponent()) {
-      riveRef.current!.play();
-    }
+    riveRef.current?.play();
   };
 
   const reset = () => {
-    if (isRefConnectedToComponent()) {
-      riveRef.current!.reset();
-    }
+    riveRef.current?.reset();
   };
 
   const fireState = (stateMachineName: string, inputName: string) => {
-    if (isRefConnectedToComponent()) {
-      riveRef.current!.fireState(stateMachineName, inputName);
-    }
+    riveRef.current?.fireState(stateMachineName, inputName);
   };
 
   const setInputState = (
@@ -128,9 +111,7 @@ export const useRiveNative: Func<Input, Output> = ({
     inputName: string,
     value: boolean | number
   ) => {
-    if (isRefConnectedToComponent()) {
-      riveRef.current!.setInputState(stateMachineName, inputName, value);
-    }
+    riveRef.current?.setInputState(stateMachineName, inputName, value);
   };
 
   return {
