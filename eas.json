@@ -1,0 +1,43 @@
+{
+  "cli": {
+    "version": ">= 7.8.1",
+    "promptToConfigurePushNotifications": false
+  },
+  "build": {
+    "common": {
+      "node": "20.12.1",
+      "android": {
+        "resourceClass": "medium"
+      },
+      "ios": {
+        "resourceClass": "medium"
+      },
+      "channel": "common"
+    },
+    "production": {
+      "extends": "common",
+      "autoIncrement": false,
+      "channel": "production"
+    },
+    "preview": {
+      "extends": "common",
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "channel": "preview"
+    },
+    "development": {
+      "extends": "common",
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

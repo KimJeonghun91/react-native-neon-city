@@ -1,0 +1,11 @@
+export const CORRECT_RIVE = '../../assets/rives/correct.riv';
+export const COUNTDOWN_RIVE = '../../assets/rives/countdown.riv';
+export const DIRECTION_ITEM_RIVE = '../../assets/rives/directionitem.riv';
+export const FEVER_BOTTOM_RIVE = '../../assets/rives/feverbottom.riv';
+export const FEVER_ITEM_RIVE = '../../assets/rives/feveritem.riv';
+export const FEVER_LEFT_RIVE = '../../assets/rives/feverleft.riv';
+export const FEVER_RIGHT_RIVE = '../../assets/rives/feverright.riv';
+export const MAIN_LOGO_RIVE = '../../assets/rives/mainlogo.riv';
+export const TARGET_RIVE = '../../assets/rives/target.riv';
+export const VANISHING_RIVE = '../../assets/rives/vanishing.riv';
+export const WRONG_RIVE = '../../assets/rives/wrong.riv';

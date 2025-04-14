@@ -1,0 +1,85 @@
+{
+  "expo": {
+    "name": "NeonCity",
+    "slug": "neon-city",
+    "version": "1.0.0",
+    "owner": "Daehyeon Mun",
+    "scheme": "neon-city",
+    "icon": "./assets/images/config/icon.png",
+    "splash": {
+      "image": "./assets/images/config/logo.png",
+      "backgroundColor": "#ffffff"
+    },
+    "newArchEnabled": false,
+    "plugins": [
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0",
+            "kotlinVersion": "1.9.25"
+          },
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
+        }
+      ],
+      [
+        "expo-custom-assets",
+        {
+          "assetsPaths": ["./assets/rives/", "./assets/audios/"]
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/"]
+        }
+      ],
+      [
+        "expo-dev-launcher",
+        {
+          "launchMode": "most-recent"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "./assets/audios/*",
+      "./assets/rives/*",
+      "./assets/images/*",
+      "./assets/fonts/*"
+    ],
+    "platforms": ["ios", "android", "web"],
+    "ios": {
+      "supportsTablet": true,
+      "requireFullScreen": true,
+      "bundleIdentifier": "com.daehyeonmun.opensource.neoncity",
+      "buildNumber": "1"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/config/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.daehyeonmun.opensource.neoncity",
+      "versionCode": 1
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/config/favicon.png"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
+  }
+}
