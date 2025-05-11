@@ -6,6 +6,7 @@ import {
   runOnJS,
   useAnimatedReaction,
   useSharedValue,
+  withDelay,
   withSequence,
   withTiming,
 } from 'react-native-reanimated';
@@ -33,35 +34,38 @@ export const useCountDown = () => {
 
     const config = { duration: 1000, easing: Easing.linear };
 
-    countdownDuration.value = withPause(
-      withSequence(
-        withTiming(3999, { duration: 0 }, (finished) => {
-          if (finished) {
-            runOnJS(playAudio)(AudioTracks.COUNTDOWN);
-          }
-        }),
-        withTiming(3000, config, (finished) => {
-          if (finished) {
-            runOnJS(playAudio)(AudioTracks.COUNTDOWN);
-          }
-        }),
-        withTiming(2000, config, (finished) => {
-          if (finished) {
-            runOnJS(playAudio)(AudioTracks.COUNTDOWN);
-          }
-        }),
-        withTiming(1000, config, (finished) => {
-          if (finished) {
-            runOnJS(playAudio)(AudioTracks.START);
-          }
-        }),
-        withTiming(0, config, (finished) => {
-          if (finished) {
-            setStatus('playing');
-          }
-        })
-      ),
-      isGamePaused
+    countdownDuration.value = withDelay(
+      300,
+      withPause(
+        withSequence(
+          withTiming(4000, { duration: 0 }, (finished) => {
+            if (finished) {
+              runOnJS(playAudio)(AudioTracks.COUNTDOWN);
+            }
+          }),
+          withTiming(3000, config, (finished) => {
+            if (finished) {
+              runOnJS(playAudio)(AudioTracks.COUNTDOWN);
+            }
+          }),
+          withTiming(2000, config, (finished) => {
+            if (finished) {
+              runOnJS(playAudio)(AudioTracks.COUNTDOWN);
+            }
+          }),
+          withTiming(1000, config, (finished) => {
+            if (finished) {
+              runOnJS(playAudio)(AudioTracks.START);
+            }
+          }),
+          withTiming(0, config, (finished) => {
+            if (finished) {
+              setStatus('playing');
+            }
+          })
+        ),
+        isGamePaused
+      )
     );
   }, []);
 
