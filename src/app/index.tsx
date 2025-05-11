@@ -4,23 +4,47 @@ import { useForceUpdate, useGameStage } from '@hooks';
 import { haptic } from '@utils';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback } from 'react';
-import { Easing, FadeIn } from 'react-native-reanimated';
+import {
+  Easing,
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
 
 export default function HomeScreen() {
   const router = useRouter();
   const { play } = useGameStage();
   const { updateId, forceUpdate } = useForceUpdate();
 
+  const opacity = useSharedValue(1);
+  const containerStyle = useAnimatedStyle(() => {
+    return {
+      opacity: opacity.value,
+    };
+  }, []);
+
+  const fadeIn = () => {
+    opacity.value = withTiming(1, {
+      duration: 500,
+      easing: Easing.out(Easing.ease),
+    });
+  };
+
+  const hide = () => {
+    opacity.value = 0;
+  };
+
   useFocusEffect(
     useCallback(() => {
       forceUpdate();
+      setTimeout(fadeIn, 500);
     }, [])
   );
 
   return (
     <AnimatedBox
       key={updateId}
-      entering={FadeIn.duration(500).easing(Easing.out(Easing.ease))}
+      style={containerStyle}
       className='w-full h-full items-center'
       collapsable={false}>
       <Cube />
@@ -41,6 +65,7 @@ export default function HomeScreen() {
             image: MENU_RANKING_IMAGE,
             onPress: () => {
               haptic();
+              hide();
               router.push('./ranking');
             },
           },
@@ -49,6 +74,7 @@ export default function HomeScreen() {
             image: MENU_ABOUT_IMAGE,
             onPress: () => {
               haptic();
+              hide();
               router.push('./about');
             },
           },
