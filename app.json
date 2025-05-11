@@ -58,7 +58,7 @@
       "./assets/images/*",
       "./assets/fonts/*"
     ],
-    "platforms": ["ios", "android", "web"],
+    "platforms": ["ios", "android"],
     "ios": {
       "supportsTablet": true,
       "requireFullScreen": true,
@@ -72,11 +72,6 @@
       },
       "package": "com.daehyeonmun.opensource.neoncity",
       "versionCode": 1
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "single",
-      "favicon": "./assets/images/config/favicon.png"
     },
     "runtimeVersion": {
       "policy": "appVersion"
