@@ -1,4 +1,4 @@
-import { useGameState, useRiveNative } from '@hooks';
+import { useGameState, useRive } from '@hooks';
 import { AudioTracks, useAudio } from '@providers';
 import { memo } from 'react';
 import { ViewStyle } from 'react-native';
@@ -32,22 +32,21 @@ export const ItemRive = memo<Props>(
     const { play } = useAudio();
     const { gameStatus, isGamePaused } = useGameState();
 
-    const { RiveComponent, reset, setInputState, resume, pause } =
-      useRiveNative({
-        resourceName,
-        fit: 'contain',
-        onStateChanged(_, stateName) {
-          if (stateName === 'fire') {
-            play(AudioTracks.ITEM_BUTTON);
-            onFire();
-            setInputState(stageMachineName, 'active', false);
-            return;
-          }
-          if (stateName === 'noFire') {
-            onNoFire();
-          }
-        },
-      });
+    const { RiveComponent, reset, setInputState, resume, pause } = useRive({
+      resourceName,
+      fit: 'contain',
+      onStateChanged(_, stateName) {
+        if (stateName === 'fire') {
+          play(AudioTracks.ITEM_BUTTON);
+          onFire();
+          setInputState(stageMachineName, 'active', false);
+          return;
+        }
+        if (stateName === 'noFire') {
+          onNoFire();
+        }
+      },
+    });
 
     useAnimatedReaction(
       () => gameStatus.value === 'ready',

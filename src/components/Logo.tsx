@@ -1,5 +1,5 @@
 import { AnimatedBox } from '@components';
-import { useAnimation, useRiveNative } from '@hooks';
+import { useAnimation, useRive } from '@hooks';
 import { useLayout } from '@providers';
 import { memo } from 'react';
 import {
@@ -18,7 +18,7 @@ export const Logo = memo(() => {
   const {
     RiveComponent: MainLogoRive, //
     play: playMainLogoRive,
-  } = useRiveNative({
+  } = useRive({
     resourceName: 'mainlogo',
     fit: 'fitWidth',
   });

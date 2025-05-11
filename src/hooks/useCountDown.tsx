@@ -1,4 +1,4 @@
-import { useGameState, useRiveNative } from '@hooks';
+import { useGameState, useRive } from '@hooks';
 import { AudioTracks, useAudio } from '@providers';
 import { useCallback } from 'react';
 import {
@@ -22,7 +22,7 @@ export const useCountDown = () => {
     play: playCountdownRive,
     pause: pauseCountdownRive,
     resume: resumeCountdownRive,
-  } = useRiveNative({
+  } = useRive({
     resourceName: 'countdown',
     fit: 'fitWidth',
     autoplay: true,

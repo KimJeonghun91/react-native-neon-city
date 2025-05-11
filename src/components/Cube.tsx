@@ -1,4 +1,4 @@
-import { useAnimation, useRiveNative, useSharedValues } from '@hooks';
+import { useAnimation, useRive, useSharedValues } from '@hooks';
 import { AudioTracks, useAudio, useLayout } from '@providers';
 import {
   Easing,
@@ -127,7 +127,7 @@ export const CubeEffect = memo(() => {
   const {
     RiveComponent: VanishingRive, //
     play: playVanishing,
-  } = useRiveNative({
+  } = useRive({
     resourceName: 'vanishing',
     fit: 'fitHeight',
     autoplay: false,

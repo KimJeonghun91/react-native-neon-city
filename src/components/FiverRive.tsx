@@ -1,4 +1,4 @@
-import { useGameState, useRiveNative } from '@hooks';
+import { useGameState, useRive } from '@hooks';
 import { memo, useCallback } from 'react';
 import { StyleSheet } from 'react-native';
 import { runOnJS, useAnimatedReaction } from 'react-native-reanimated';
@@ -13,7 +13,7 @@ export const FiverRive = memo(() => {
     resume: resumeFeverLeft,
     stop: stopFeverLeft,
     play: playFeverLeft,
-  } = useRiveNative({
+  } = useRive({
     resourceName: 'feverleft',
     autoplay: true,
   });
@@ -25,7 +25,7 @@ export const FiverRive = memo(() => {
     resume: resumeFeverRight,
     stop: stopFeverRight,
     play: playFeverRight,
-  } = useRiveNative({
+  } = useRive({
     resourceName: 'feverright',
     autoplay: true,
   });
@@ -37,7 +37,7 @@ export const FiverRive = memo(() => {
     resume: resumeFeverBottom,
     stop: stopFeverBottom,
     play: playFeverBottom,
-  } = useRiveNative({
+  } = useRive({
     resourceName: 'feverbottom',
     autoplay: true,
     fit: 'fitHeight',

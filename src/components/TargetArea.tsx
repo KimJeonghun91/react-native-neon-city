@@ -1,5 +1,5 @@
 import { CONSECUTIVE_MAX_COMBO } from '@configs';
-import { useGameState, useRiveNative } from '@hooks';
+import { useGameState, useRive } from '@hooks';
 import { useLayout } from '@providers';
 import {
   runOnJS,
@@ -28,7 +28,7 @@ export const TargetArea = memo(() => {
     stop: stopTargetRive,
     fireState: fireStateTargetRive,
     setInputState: setInputStateTargetRive,
-  } = useRiveNative({
+  } = useRive({
     resourceName: 'target',
     fit: 'fitHeight',
   });

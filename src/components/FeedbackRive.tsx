@@ -1,4 +1,4 @@
-import { useGameState, useRiveNative } from '@hooks';
+import { useGameState, useRive } from '@hooks';
 import { useLayout } from '@providers';
 import {
   runOnJS,
@@ -21,16 +21,15 @@ export const FeedbackRive = memo(() => {
     };
   }, []);
 
-  const { RiveComponent: CorrectRive, play: playCorrectRive } = useRiveNative({
+  const { RiveComponent: CorrectRive, play: playCorrectRive } = useRive({
     resourceName: 'correct',
     fit: 'fitHeight',
   });
 
-  const { RiveComponent: IncorrectRive, play: playIncorrectRive } =
-    useRiveNative({
-      resourceName: 'wrong',
-      fit: 'fitHeight',
-    });
+  const { RiveComponent: IncorrectRive, play: playIncorrectRive } = useRive({
+    resourceName: 'wrong',
+    fit: 'fitHeight',
+  });
 
   useAnimatedReaction(
     () => gameMetrics.value,

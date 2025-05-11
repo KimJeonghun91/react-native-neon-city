@@ -51,7 +51,7 @@ type Output = {
   ) => void;
 };
 
-export const useRiveNative: Func<Input, Output> = ({
+export const useRive: Func<Input, Output> = ({
   fit = 'cover',
   autoplay = false,
   ...rest
