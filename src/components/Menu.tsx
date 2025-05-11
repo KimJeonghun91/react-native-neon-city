@@ -2,7 +2,7 @@ import { AnimatedBox, AnimatedButton, Image, VStack } from '@components';
 import { useAnimation } from '@hooks';
 import { AudioTracks, useAudio, useLayout } from '@providers';
 import { ImageProps } from 'expo-image';
-import { memo } from 'react';
+import { memo, useRef } from 'react';
 import {
   Easing,
   FadeInDown,
@@ -24,6 +24,7 @@ export const Menu = memo<MenuProps>(({ items }) => {
   const { play } = useAudio();
   const { animation } = useAnimation();
   const { layout } = useLayout();
+  const isPressedRef = useRef(false);
 
   const containerOpacity = useSharedValue(1);
   const containerStyle = useAnimatedStyle(() => {
@@ -62,8 +63,21 @@ export const Menu = memo<MenuProps>(({ items }) => {
                 .springify()
                 .easing(Easing.inOut(Easing.ease))}
               style={buttonStyle}
-              onPressIn={() => play(AudioTracks.CLICK)}
-              onPress={item.onPress}>
+              onPressIn={() => {
+                if (isPressedRef.current) {
+                  return;
+                }
+
+                play(AudioTracks.CLICK);
+              }}
+              onPress={() => {
+                if (isPressedRef.current) {
+                  return;
+                }
+
+                isPressedRef.current = true;
+                item.onPress();
+              }}>
               <Image source={item.image} contentFit='contain' />
             </AnimatedButton>
           );
