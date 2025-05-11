@@ -54,7 +54,7 @@ export default function AboutScreen() {
                 ],
               })}>
             <VStack key={credit.role} justify='center' space={16}>
-              <Text className='text-3xl font-black'>{credit.role}</Text>
+              <Text className='text-3xl font-orbitron-bold'>{credit.role}</Text>
               <Button onPress={() => Linking.openURL(`https://${credit.link}`)}>
                 <VStack space={8}>
                   <Text className='text-lg'>{credit.name}</Text>
