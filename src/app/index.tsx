@@ -1,6 +1,7 @@
 import { MENU_ABOUT_IMAGE, MENU_PLAY_IMAGE, MENU_RANKING_IMAGE } from '@assets';
 import { AnimatedBox, Cube, CubeEffect, Logo, Menu } from '@components';
 import { useForceUpdate, useGameStage } from '@hooks';
+import { haptic } from '@utils';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback } from 'react';
 import { Easing, FadeIn } from 'react-native-reanimated';
@@ -13,7 +14,7 @@ export default function HomeScreen() {
   useFocusEffect(
     useCallback(() => {
       forceUpdate();
-    }, [forceUpdate])
+    }, [])
   );
 
   return (
@@ -31,7 +32,7 @@ export default function HomeScreen() {
             id: 'Play',
             image: MENU_PLAY_IMAGE,
             onPress: () => {
-              // TODO: haptics
+              haptic();
               play();
             },
           },
@@ -39,7 +40,7 @@ export default function HomeScreen() {
             id: 'Ranking',
             image: MENU_RANKING_IMAGE,
             onPress: () => {
-              // TODO: haptics
+              haptic();
               router.push('./ranking');
             },
           },
@@ -47,7 +48,7 @@ export default function HomeScreen() {
             id: 'About',
             image: MENU_ABOUT_IMAGE,
             onPress: () => {
-              // TODO: haptics
+              haptic();
               router.push('./about');
             },
           },
