@@ -47,10 +47,10 @@ export const Stat: FC<Props> = ({ label, value, isNew, animate = true }) => {
       <VStack justify='center'>
         <Text className='text-xl font-orbitron-semibold'>{label}</Text>
         <ReText
+          className='font-orbitron-extrabold'
           style={{
             fontSize: 40,
             lineHeight: 52,
-            fontFamily: 'Orbitron-Extrabold',
             color: '#E8FFFE',
           }}
           text={animatedText}
