@@ -9,10 +9,10 @@ NeonCity: CityRunner is a high-quality mobile game built with React Native and E
 ## Preview
 
 <p align="center">
-  <img src="./assets/images/config/app-screenshot-1.webp" width="220" height="480" alt="NeonCity Screenshot" />
-  <img src="./assets/images/config/app-screenshot-2.webp" width="220" height="480" alt="NeonCity Screenshot" />
-  <img src="./assets/images/config/app-screenshot-3.webp" width="220" height="480" alt="NeonCity Screenshot" />
-  <img src="./assets/images/config/app-screenshot-4.webp" width="220" height="480" alt="NeonCity Screenshot" />
+  <img src="./assets/images/config/app-screenshot-1.webp" width="200" height="480" alt="NeonCity Screenshot" />
+  <img src="./assets/images/config/app-screenshot-2.webp" width="200" height="480" alt="NeonCity Screenshot" />
+  <img src="./assets/images/config/app-screenshot-3.webp" width="200" height="480" alt="NeonCity Screenshot" />
+  <img src="./assets/images/config/app-screenshot-4.webp" width="200" height="480" alt="NeonCity Screenshot" />
 </p>
 
 ## Setup and Run
