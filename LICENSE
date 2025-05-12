@@ -1,29 +1,21 @@
-Copyright © 2024 Daehyeon Mun. All rights reserved.
+MIT License
 
-This document outlines the terms and conditions under which the software and its associated documentation files (the "Software"), owned by Daehyeon Mun ("Copyright Holder"), are licensed. The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties.
+Copyright (c) 2025 Daehyeon Mun
 
-PERMITTED USES:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-- The Software is licensed, not sold, and is available for use solely by employees, contractors, and members of Daehyeon Mun.
-- Use of the Software is subject to these terms, and is only permitted within the scope of employment, contract, or membership with Daehyeon Mun.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-RESTRICTIONS:
-
-- No part of the Software may be used, copied, modified, distributed, transmitted, displayed, performed, published, licensed, sold, transferred, or otherwise exploited for any purposes whatsoever without the express written consent of the Copyright Holder.
-- The Software may not be decompiled, reverse engineered, disassembled, or otherwise reduced to human-perceivable form, except to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation.
-- This license does not grant you any rights to use the proprietary logos, service marks, or trademarks of Daehyeon Mun.
-
-CONFIDENTIALITY:
-
-- The Software contains trade secrets and proprietary information that are owned by Daehyeon Mun and are protected by law. You agree to maintain the confidentiality of the Software and not disclose any part of it to anyone outside of Daehyeon Mun.
-
-DISCLAIMER OF WARRANTY:
-
-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-- IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-GOVERNING LAW:
-
-- This agreement is governed by the laws of the jurisdiction in which the Copyright Holder is located, without regard to its conflict of law provisions.
-
-Your use of the Software constitutes your agreement to the terms of this license. If you do not agree to the terms of this license, do not install or use the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
