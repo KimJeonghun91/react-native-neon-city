@@ -1,10 +1,8 @@
-# NeonCity: CityRunner
-
 <p align="center">
   <img src="./assets/images/config/icon.png" width="120" height="120" alt="NeonCity Logo" />
 </p>
 
-<br />
+<h1 align="center">NeonCity: CityRunner</h1>
 
 NeonCity: CityRunner is a high-quality mobile game built with React Native and Expo created by [Daehyeon Mun](https://x.com/daehyeonmun) and [Woojae Lee](https://woojaelee.net/).
 
