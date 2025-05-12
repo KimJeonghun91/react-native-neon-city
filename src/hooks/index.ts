@@ -1,5 +1,4 @@
 export * from './useAppState';
-export * from './useHaptic';
 export * from './useRive';
 export * from './useSpriteImage';
 export * from './useSharedValues';
