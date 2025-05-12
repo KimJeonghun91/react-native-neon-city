@@ -1,6 +1,8 @@
 # NeonCity: CityRunner
 
-<img src="./assets/images/config/icon.png" width="120" height="120" alt="NeonCity Logo" style="display: block; margin: 0 auto; border-radius: 50%;" />
+<p align="center">
+  <img src="./assets/images/config/icon.png" width="120" height="120" alt="NeonCity Logo" />
+</p>
 
 <br />
 
@@ -8,10 +10,12 @@ NeonCity: CityRunner is a high-quality mobile game built with React Native and E
 
 ## Preview
 
-<img src="./assets/images/config/app-screenshot-1.webp" width="220" height="480" alt="NeonCity Screenshot" />
-<img src="./assets/images/config/app-screenshot-2.webp" width="220" height="480" alt="NeonCity Screenshot" />
-<img src="./assets/images/config/app-screenshot-3.webp" width="220" height="480" alt="NeonCity Screenshot" />
-<img src="./assets/images/config/app-screenshot-4.webp" width="220" height="480" alt="NeonCity Screenshot" />
+<p align="center">
+  <img src="./assets/images/config/app-screenshot-1.webp" width="220" height="480" alt="NeonCity Screenshot" />
+  <img src="./assets/images/config/app-screenshot-2.webp" width="220" height="480" alt="NeonCity Screenshot" />
+  <img src="./assets/images/config/app-screenshot-3.webp" width="220" height="480" alt="NeonCity Screenshot" />
+  <img src="./assets/images/config/app-screenshot-4.webp" width="220" height="480" alt="NeonCity Screenshot" />
+</p>
 
 ## Setup and Run
 
