@@ -36,14 +36,14 @@ export const ItemRive = memo<Props>(
       resourceName,
       fit: 'contain',
       onStateChanged(_, stateName) {
+        if (stateName === 'noFire') {
+          onNoFire();
+        }
         if (stateName === 'fire') {
           play(AudioTracks.ITEM_BUTTON);
           onFire();
           setInputState(stageMachineName, 'active', false);
           return;
-        }
-        if (stateName === 'noFire') {
-          onNoFire();
         }
       },
     });
