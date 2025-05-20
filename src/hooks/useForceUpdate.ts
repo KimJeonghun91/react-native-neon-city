@@ -1,10 +1,10 @@
 import { useCallback, useState } from 'react';
 
 export const useForceUpdate = () => {
-  const [updateId, setUpdateId] = useState(Math.random());
+  const [updateId, setUpdateId] = useState(performance.now());
 
   const forceUpdate = useCallback(() => {
-    setUpdateId(Math.random());
+    setUpdateId(performance.now());
   }, []);
 
   return {
