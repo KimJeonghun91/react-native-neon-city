@@ -21,7 +21,7 @@ export enum AudioTracks {
   'CLICK' = 4,
   'WARNING' = 5,
   'COUNTDOWN' = 6,
-  'CLOSE_SKIA_BUTTON' = 7,
+  'CLOSE_BUTTON' = 7,
   'HIDE_CUBE' = 8,
   'START' = 9,
   'ITEM_BUTTON' = 10,
@@ -54,7 +54,7 @@ export const AudioProvider: FC<IAudioProviderProps> = ({ children }) => {
       [AudioTracks.CLICK]: assetPath + 'click.mp3',
       [AudioTracks.WARNING]: assetPath + 'warning.mp3',
       [AudioTracks.COUNTDOWN]: assetPath + 'beep.mp3',
-      [AudioTracks.CLOSE_SKIA_BUTTON]: assetPath + 'beep16.mp3',
+      [AudioTracks.CLOSE_BUTTON]: assetPath + 'beep16.mp3',
       [AudioTracks.HIDE_CUBE]: assetPath + 'electric.mp3',
       [AudioTracks.ITEM_BUTTON]: assetPath + 'itemclick.mp3',
     });

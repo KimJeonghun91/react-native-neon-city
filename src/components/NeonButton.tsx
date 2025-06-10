@@ -352,7 +352,7 @@ export const NeonButton = memo<Props>(function NeonButton({
       style={[style, { borderWidth: 1 }, containerStyle]}
       onPressIn={() => {
         haptic();
-        play(AudioTracks.CLOSE_SKIA_BUTTON)
+        play(AudioTracks.CLOSE_BUTTON)
       }}
       onPress={close}>
       <AnimatedBox
