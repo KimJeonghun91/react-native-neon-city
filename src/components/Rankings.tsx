@@ -1,5 +1,5 @@
 import { FC, memo, useState } from 'react';
-import { AnimatedText, Box, HStack, Text, VStack } from './common';
+import { AnimatedText, Box, HStack, Image, Text, VStack } from './common';
 import {
   Easing,
   interpolate,
@@ -12,6 +12,7 @@ import { useDidUpdate } from 'rooks';
 import { useGameRankingValues } from '@hooks';
 import { Game } from '@types';
 import { FlashList } from '@shopify/flash-list';
+import { PROFILE_IMAGE } from '@assets';
 
 type ITab = 'Today' | 'Week' | 'All Time';
 
@@ -78,7 +79,9 @@ const Rank: FC<{
             </Text>
           </Box>
           <HStack space={8}>
-            <Box className='w-10 h-10 bg-[#D9D9D9] rounded-full' />
+            <Box className='w-10 h-10 bg-[#D9D9D9] rounded-full overflow-hidden' >
+              <Image source={PROFILE_IMAGE} className='w-full h-full' />
+            </Box>
             <Text className='text-lg text-black/70 font-orbitron-medium'>
               {rank.userId}
             </Text>
