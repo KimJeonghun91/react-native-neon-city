@@ -14,6 +14,7 @@ import { AudioTracks, useAudio, useLayout } from '@providers';
 import { MENU_FRAME_1_IMAGE, MENU_FRAME_2_IMAGE } from '@assets';
 import { useDidMount } from 'rooks';
 import { useSharedValues } from '@hooks';
+import { haptic } from '@utils';
 
 type ButtonType = 'small' | 'medium' | 'large';
 
@@ -349,7 +350,10 @@ export const NeonButton = memo<Props>(function NeonButton({
   return (
     <AnimatedButton
       style={[style, { borderWidth: 1 }, containerStyle]}
-      onPressIn={() => play(AudioTracks.CLICK)}
+      onPressIn={() => {
+        haptic();
+        play(AudioTracks.CLOSE_SKIA_BUTTON)
+      }}
       onPress={close}>
       <AnimatedBox
         className='flex-1 justify-center items-center'
