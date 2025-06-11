@@ -100,8 +100,7 @@ export const AudioProvider: FC<IAudioProviderProps> = ({ children }) => {
     },
     [bgm?.isLoaded, playBgm]
   );
-
-  // * Release audio when exit training content screen
+  
   useWillUnmount(() => {
     audioControl.release();
   });
